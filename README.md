@@ -11,4 +11,7 @@ Bellabeat also has a membership available for customers. This membership provide
 As a data analyst, I am tasked with reviewing smart device data that is not related to Bellabeat. My goal is to track trends in the smart device usage and see how these trends apply to Bellabeat customers. I have also been asked to recommend different marketing strategies to increase awareness and profitability for the company.
 
 # About the Data
-The data I will be analyzing is from FitBit. It is a public domain dataset that has been Mobius in Kaggle. The link to the open source data set can be found here. [FitBit Tracker Dataset](https://www.kaggle.com/datasets/arashnic/fitbit)
+The data I will be analyzing is from FitBit. It is a public domain dataset that has been Mobius in Kaggle. The link to the open source dataset can be found here. [FitBit Tracker Dataset](https://www.kaggle.com/datasets/arashnic/fitbit)
+
+
+
