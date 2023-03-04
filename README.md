@@ -143,4 +143,4 @@ Here we can see that customers much prefer to track their workouts and sleep wit
   
 Now that I have figured out how woman use a smart product, I wanted to analyze some of the trends in the data generated from the smart product. I first wanted to find out how someones workout impacted their minutes laying awake in bed. Again, we can consider a workout where the sum of the VeryActiveMinutes and ModerateActiveMinutes is greater than 10.
 
-![Minutes Awake in Bed vs  Daily Activity](https://user-images.githubusercontent.com/102268286/222926325-ccec5b62-8f83-4c48-af09-86cfec146063.PNG)
+
