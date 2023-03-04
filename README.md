@@ -30,9 +30,23 @@ I first downloaded the CSV files and started cleaning them in Microsoft Excel wi
   6. Opened the hourlyCalories_merged and hourlySteps_merged files and combined them into a new file called hourly_steps_calories.
   7. Opened the hourlyIntensities_merged file and saved it as a new file called hourly_intensities I then converted the ActivityHour column to a Date data type and           formnatted it as mm/dd/yy hh:mm.
   
-I then uploaded the daily_activity, hourly_steps_calories, and hourly_intensities tables to BigQuery. I also uploaded the heartrate_seconds_merged table to Google Cloud, as the file was to large to open in Excel. I then uploaded the table to BigQuery from Google Cloud and renamed it as heartrate_in_seconds.
+I then uploaded the daily_activity, hourly_steps_calories, and hourly_intensities tables to BigQuery. I also uploaded the heartrate_seconds_merged table to Google Cloud, as the file was to large to open in Excel. I then uploaded the table to BigQuery from Google Cloud and renamed it as heartrate_in_seconds by using the following SQL query.
+
+```sqlCREATE TABLE `my-first-project-374001.Bellabeat.heartrate_in_seconds`
+AS SELECT SAFE_CAST(id AS int64) AS id,
+      Time AS Time,
+      SAFE_CAST(Value AS int64) AS Value
+      FROM `my-first-project-374001.Bellabeat.heartrate_seconds````
+
+
+
+
+
+
+
 
 Schema of the tables:<br>
+
 daily_activity<br>
   -Id: Integer<br>
   -ActivityDate: Date<br>
