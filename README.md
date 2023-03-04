@@ -1,3 +1,2 @@
 # Bellabeat Project
-(`<br>`)
-Overview
+
