@@ -34,8 +34,8 @@ I then uploaded the daily_activity, hourly_steps_calories, and hourly_intensitie
 
 Schema of the tables:
 daily_activity
-  Id: Integer
-  ActivityDate: Date
+  -Id: Integer
+  -ActivityDate: Date
   TotalSteps: Integer
   TotalSleepRecords: Integer
   TotalMinutesAsleep: Integer
