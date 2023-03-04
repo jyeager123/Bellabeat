@@ -175,7 +175,7 @@ Next I wanted to find out how a womans workout routine and steps taken per day i
 ---Finds the calorie intake and workout distance---
 SELECT Calories, (VeryActiveDistance + ModerateActiveDistance) AS WorkoutDistance
 FROM `my-first-project-374001.Bellabeat.daily_activity`
-WHERE Calories>0 AND (VeryActiveDistance + ModerateActiveDistance)>10
+WHERE Calories>0 AND (VeryActiveMinutes + ModerateActiveMinutes)>10
 ```
 
 ```
