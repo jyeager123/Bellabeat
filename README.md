@@ -165,8 +165,7 @@ FROM `my-first-project-374001.Bellabeat.daily_activity`
 WHERE MinutesAwakeInBed>0 AND TotalSteps>0
 ```
 
-
-
+![Minutes Awake in Bed vs  Daily Activity](https://user-images.githubusercontent.com/102268286/222928289-9bdb5388-f09f-454f-83f8-242e5f0dfd8c.PNG)
 
 As we can see a womans' workout routine and total steps taken in a day had close to no impact on their time laying awake in bed, as the correlation of all thhree is close to zero.
 
@@ -176,14 +175,14 @@ Next I wanted to find out how a womans workout routine and steps taken per day i
 ---Finds the calorie intake and workout distance---
 SELECT Calories, (VeryActiveDistance + ModerateActiveDistance) AS WorkoutDistance
 FROM `my-first-project-374001.Bellabeat.daily_activity`
-WHERE Calories>0 AND (VeryActiveDistance + ModerateActiveDistance)>0
+WHERE Calories>0 AND (VeryActiveDistance + ModerateActiveDistance)>10
 ```
 
 ```
 ---Finds the calorie intake and workout minutes---
 SELECT Calories, (VeryActiveMinutes + ModerateActiveMinutes) AS WorkoutMinutes
 FROM `my-first-project-374001.Bellabeat.daily_activity`
-WHERE Calories>0 AND (VeryActiveMinutes + ModerateActiveMinutes)>0
+WHERE Calories>0 AND (VeryActiveMinutes + ModerateActiveMinutes)>10
 ```
 
 ```
