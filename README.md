@@ -269,3 +269,7 @@ WHERE (SedentaryActiveMinutes + LightActiveMinutes + ModerateActiveMinutes + Ver
 
 We see that the woman surveyed typically go about 5 to 6 miles a day, with a little less than half of that being working out. On the other hand, their time working out per day makes up very little of their daily schedule.
 
+# Conclusion
+My analysis has determined that the woman surveyed using the FitbBit data tend to use a smart device to track their workout routines as well as their sleep. However, their workout routine does not have much of an impact on how fast they fall asleep. On the other hand, their workout routine, as well as their total steps taken in a day, tends to have a significiant impact on their calorie intake as those who have worked out longer, traveled farther while working out, and had more steps in a day, tend to ingest more calories.
+
+Another aspect I found through my analysis is the preference of when to workout. The woman surveryed tend to like to workout more during the weekdays, with an evening workout being the most popular. Also, a significant portion of their distance traveled in a day, tends to be when they are working out.
