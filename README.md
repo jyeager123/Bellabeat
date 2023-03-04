@@ -165,7 +165,7 @@ FROM `my-first-project-374001.Bellabeat.daily_activity`
 WHERE MinutesAwakeInBed>0 AND TotalSteps>0
 ```
 
-![Minutes Awake in Bed vs  Daily Activity](https://user-images.githubusercontent.com/102268286/222928289-9bdb5388-f09f-454f-83f8-242e5f0dfd8c.PNG)
+![Minutes Awake in Bed vs  Daily Activity](https://user-images.githubusercontent.com/102268286/222931464-23e4a4b0-74c6-42c0-a9ec-05d6c631135c.PNG)
 
 As we can see a womans' workout routine and total steps taken in a day had close to no impact on their time laying awake in bed, as the correlation of all thhree is close to zero.
 
