@@ -195,3 +195,34 @@ WHERE TotalSteps>0 AND Calories>0
 ![Calories vs  Daily Activity](https://user-images.githubusercontent.com/102268286/222928326-7aec217b-1e52-4f0e-bc06-2f6c2c7154a0.PNG)
 
 Here we see a much strong correlation compared to that of the previous scatter plots. The intake of calories to workout minutes and total steps is over 0.50, while the correlation to calories to workout distance is closer to 0.40.
+
+I now want to figure out which days were the most popular for working out.
+
+```
+---Finds the number of workouts done per day---
+SELECT CASE EXTRACT(DAYOFWEEK FROM ActivityDate)
+            WHEN 1 THEN 'Sunday'
+            WHEN 2 THEN 'Monday'
+            WHEN 3 THEN 'Tuesday'
+            WHEN 4 THEN 'Wednesday'
+            WHEN 5 THEN 'Thursday'
+                  WHEN 6 THEN 'Friday'
+      WHEN 7 THEN 'Saturday'
+      END AS day_of_week,
+      COUNT(*) AS number_of_workouts
+FROM `my-first-project-374001.Bellabeat.daily_activity`
+WHERE (VeryActiveMinutes + ModerateActiveMinutes)>10
+GROUP BY day_of_week
+ORDER BY number_of_workouts DESC
+```
+|day_of_week | number_of_workouts	|
+|----------|----------|
+|Wednesday |	87 |	
+|Tuesday | 87	|
+|Thursday | 81	|
+|Monday |	74	|
+|Saturday |	68	|
+|Friday |	64	|
+|Sunday	| 57	|
+
+
