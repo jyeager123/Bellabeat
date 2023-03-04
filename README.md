@@ -138,5 +138,7 @@ ORDER BY track_heartrate DESC
 ```
 
 ![Product Use](https://user-images.githubusercontent.com/102268286/222925270-033e1b21-549e-483d-badb-657194d254a4.PNG)
+
+Here we can see that customers much prefer to track their workouts and sleep with a smart prduct compared to tracking their heartrate.
   
 
