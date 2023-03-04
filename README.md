@@ -192,3 +192,6 @@ FROM `my-first-project-374001.Bellabeat.daily_activity`
 WHERE TotalSteps>0 AND Calories>0
 ```
 
+![Calories vs  Daily Activity](https://user-images.githubusercontent.com/102268286/222928326-7aec217b-1e52-4f0e-bc06-2f6c2c7154a0.PNG)
+
+Here we see a much strong correlation compared to that of the previous scatter plots. The intake of calories to workout minutes and total steps is over 0.50, while the correlation to calories to workout distance is closer to 0.40.
