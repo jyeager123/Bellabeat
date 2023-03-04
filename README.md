@@ -54,8 +54,8 @@ daily_activity
   SedentaryActiveMinutes: Integer
   Calories: Integer
   
-heartrate_in_seconds
-  Id: Integer
+heartrate_in_seconds<br>
+  Id: Integer<br>
   Time: String
   Value: Intger
   
