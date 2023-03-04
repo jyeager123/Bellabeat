@@ -41,12 +41,6 @@ AS SELECT SAFE_CAST(id AS int64) AS id,
       FROM `my-first-project-374001.Bellabeat.heartrate_seconds`
 ```
 
-
-
-
-
-
-
 Schema of the tables:<br>
 
 daily_activity<br>
@@ -87,6 +81,61 @@ hourly_steps_calories<br>
   -StepTotal: Integer<br>
   -Calories: Integer<br>
   
+#### The Analysis
+My first order of business was to figure out how many woman use a smart device to track their workout, track their sleep, and track their heartrate. We will consider a workout as the sum of the VeryActiveMinutes and ModerateActiveMinutes that is greater than 10 minutes. I ran a few queries to find the results
+
+```
+---Finds the number of woman who use a smart product to workout and who don't use a smart product to workout---
+WITH working_out AS(
+      SELECT 'use product' AS to_workout, COUNT(id) as number_of_customers 
+      FROM (SELECT id, ROUND(SUM(ModerateActiveMinutes)/31 + SUM(VeryActiveMinutes)/31,2) AS working_out_minutes
+      FROM `my-first-project-374001.Bellabeat.daily_activity`
+      GROUP BY id
+      HAVING working_out_minutes>10)
+),
+  not_working_out AS(
+      SELECT "don't use product" AS to_workout, COUNT(id) as number_of_customers
+      FROM (SELECT id, ROUND(SUM(ModerateActiveMinutes)/31 + SUM(VeryActiveMinutes)/31,2) AS working_out_minutes
+      FROM `my-first-project-374001.Bellabeat.daily_activity`
+      GROUP BY id
+      HAVING working_out_minutes<10)
+)
+SELECT * FROM working_out
+UNION ALL 
+SELECT * FROM not_working_out
+```
+
+```
+---Finds the number of woman who use a smart product to track their sleep and who don't use a smart product to track their sleep---
+WITH use_to_track_sleep AS (
+      SELECT 'use product' AS to_track_sleep, COUNT(DISTINCT id) AS number_of_customers
+      FROM `my-first-project-374001.Bellabeat.daily_activity` 
+      WHERE TotalSleepRecords>0
+),
+  dont_use_to_track_sleep AS (
+      SELECT "don't use product" AS to_track_sleep, COUNT(sleep_records) AS number_of_customers
+      FROM (SELECT Id, AVG(TotalSleepRecords) AS sleep_records
+      FROM `my-first-project-374001.Bellabeat.daily_activity`
+      GROUP BY Id)
+      WHERE sleep_records=0
+)
+SELECT * FROM use_to_track_sleep
+UNION ALL
+SELECT * FROM dont_use_to_track_sleep
+```
+
+```
+---Finds the number of woman who use a smart product to track their heartrate and who don't use a smart product to track their heartrate---
+SELECT 'use product' AS track_heartrate, COUNT(DISTINCT id) AS number_of_customers
+FROM `my-first-project-374001.Bellabeat.heartrate_in_seconds`
+UNION DISTINCT
+SELECT "don't use product" AS track_heartrate, COUNT(DISTINCT not_heartrate.id) AS number_of_customers
+FROM `my-first-project-374001.Bellabeat.daily_activity` not_heartrate
+LEFT JOIN `my-first-project-374001.Bellabeat.heartrate_in_seconds` heartrate
+ON heartrate.id=not_heartrate.id
+WHERE heartrate.id IS NULL
+ORDER BY track_heartrate DESC
+```
   
   
 
