@@ -268,3 +268,5 @@ WHERE (SedentaryActiveMinutes + LightActiveMinutes + ModerateActiveMinutes + Ver
 
 ![Minutes Spent per Day](https://user-images.githubusercontent.com/102268286/222931026-fc58bc78-7ae7-4320-a505-ef39dc4e1776.PNG)
 
+We see that the woman surveyed typically go about 5 to 6 miles a day, with a little less than half of that being working out. On the other hand, their time working out per day makes up very little of their daily schedule.
+
