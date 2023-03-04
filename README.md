@@ -16,7 +16,7 @@ The data I will be analyzing is from FitBit. It is a public domain dataset that 
 The data provided is from a survey of woman who wear a smart device to track their health and daily activity. The data has a few limitations as only 33 woman were surveyed across a one month period from 4/12/16 to 5/12/16.
 
 # The Case Study
-## Cleaning and Transforming the Data
+#### Cleaning and Transforming the Data
 
 Data Analysts tools used: Microsoft Excel, BigQuery, Power BI
 
