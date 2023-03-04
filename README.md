@@ -266,4 +266,5 @@ WHERE (SedentaryActiveMinutes + LightActiveMinutes + ModerateActiveMinutes + Ver
 
 ![Distance per Day](https://user-images.githubusercontent.com/102268286/222930992-4a3c3616-5b8e-4087-97dd-85aa6a8a74d7.PNG)
 
+![Minutes Spent per Day](https://user-images.githubusercontent.com/102268286/222931026-fc58bc78-7ae7-4320-a505-ef39dc4e1776.PNG)
 
