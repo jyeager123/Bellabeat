@@ -55,21 +55,21 @@ daily_activity<br>
   -Calories: Integer<br>
   
 heartrate_in_seconds<br>
-  Id: Integer<br>
-  Time: String
-  Value: Intger
+  -Id: Integer<br>
+  -Time: String<br>
+  -Value: Intger<br>
   
-hourly_intensities
-  Id: Integer
-  ActivityHour: Timestamp
-  TotalIntensity: Integer
-  AverageIntensity: Float
+hourly_intensities<br>
+  -Id: Integer<br>
+  -ActivityHour: Timestamp<br>
+  -TotalIntensity: Integer<br>
+  -AverageIntensity: Float<br>
   
-hourly_steps_calories
-  Id: Integer
-  ActivityHour: Timestamp
-  StepTotal: Integer
-  Calories: Integer
+hourly_steps_calories<br>
+  -Id: Integer<br>
+  -ActivityHour: Timestamp<br>
+  -StepTotal: Integer<br>
+  -Calories: Integer<br>
   
   
   
