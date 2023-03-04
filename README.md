@@ -227,3 +227,13 @@ ORDER BY number_of_workouts DESC
 
 As we can see, the woman surveyed tend to prefer to workout during the weekdays compared to that of the weekend.
 
+Now that we have the most popular days to workout on, I wanted to find what time of day the woman prefere to workout.
+```
+---Finds the most popular time of day to workout---
+SELECT EXTRACT(HOUR FROM ActivityHour) AS hour_of_day,
+      ROUND(AVG(TotalIntensity), 2) AS AverageIntensity
+FROM `my-first-project-374001.Bellabeat.hourly_intensities`
+GROUP BY hour_of_day
+ORDER BY hour_of_day
+```
+
