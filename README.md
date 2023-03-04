@@ -24,4 +24,6 @@ I first downloaded the CSV files and started cleaning them in Microsoft Excel wi
 
   1. Opened the"dailyActivity_merged" file, which already contained the data from the "dailyCalories_merged", "dailyIntensities_merged", and "dailySteps_merged" files.       I then renamed the "dailyActivities_merged" file to "daily_activity".
   2. Opened the "sleepDay_merged" file and added that data to the new "daily_activity" file.
-  3. 
+  3. Renamed the FairlyActiveMinutes column to ModerateActiveMinutes, renamed the ModeratelyActiveDistance column to ModerateActiveDistance, renamed                         LightlyActiveMinutes column to LightActiveMinutes, and renamed SedentaryMinutes column to SedentaryActiveMinutes.
+  4. Formatted the TotalDistance, TrackerDistance, LoggedActivitiesDistance, VeryActiveDistance, ModerateActiveDistance, LightActiveDistance, and                             SedentaryActiveDistance columns so that the values were no more than decimal places.
+
