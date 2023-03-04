@@ -225,4 +225,5 @@ ORDER BY number_of_workouts DESC
 |Friday |	64	|
 |Sunday	| 57	|
 
+As we can see, the woman surveyed tend to prefer to workout during the weekdays compared to that of the weekend.
 
