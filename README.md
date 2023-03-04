@@ -33,6 +33,7 @@ I first downloaded the CSV files and started cleaning them in Microsoft Excel wi
 I then uploaded the daily_activity, hourly_steps_calories, and hourly_intensities tables to BigQuery. I also uploaded the heartrate_seconds_merged table to Google Cloud, as the file was to large to open in Excel. I then uploaded the table to BigQuery from Google Cloud and renamed it as heartrate_in_seconds by using the following SQL query.
 
 ```
+---Creates table called heartrate_seconds---
 CREATE TABLE `my-first-project-374001.Bellabeat.heartrate_in_seconds`
 AS SELECT SAFE_CAST(id AS int64) AS id,
       Time AS Time,
