@@ -263,3 +263,7 @@ SELECT ActivityDate,
 FROM `my-first-project-374001.Bellabeat.daily_activity`
 WHERE (SedentaryActiveMinutes + LightActiveMinutes + ModerateActiveMinutes + VeryActiveMinutes)>0
 ```
+
+![Distance per Day](https://user-images.githubusercontent.com/102268286/222930992-4a3c3616-5b8e-4087-97dd-85aa6a8a74d7.PNG)
+
+
