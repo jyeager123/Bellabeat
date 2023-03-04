@@ -33,6 +33,44 @@ I first downloaded the CSV files and started cleaning them in Microsoft Excel wi
 I then uploaded the daily_activity, hourly_steps_calories, and hourly_intensities tables to BigQuery. I also uploaded the heartrate_seconds_merged table to Google Cloud, as the file was to large to open in Excel. I then uploaded the table to BigQuery from Google Cloud and renamed it as heartrate_in_seconds.
 
 Schema of the tables:
-
+daily_activity
+  Id: Integer
+  ActivityDate: Date
+  TotalSteps: Integer
+  TotalSleepRecords: Integer
+  TotalMinutesAsleep: Integer
+  TotalMinutesInBed: Integer
+  MinutesAwakeInBed: Integer
+  TotalDistance: Float
+  TrackerDistance: Float
+  LoggedActivitiesDistance: Float
+  VeryActiveDistance: Float
+  ModerateActiveDistance: Float
+  LightActiveDistance: Float
+  SedentaryActiveDistance: Float
+  VeryActiveMinutes: Integer
+  ModerateActiveMinutes: Integer
+  LightActiveMinutes: Integer
+  SedentaryActiveMinutes: Integer
+  Calories: Integer
+  
+heartrate_in_seconds
+  Id: Integer
+  Time: String
+  Value: Intger
+  
+hourly_intensities
+  Id: Integer
+  ActivityHour: Timestamp
+  TotalIntensity: Integer
+  AverageIntensity: Float
+  
+hourly_steps_calories
+  Id: Integer
+  ActivityHour: Timestamp
+  StepTotal: Integer
+  Calories: Integer
+  
+  
   
 
