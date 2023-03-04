@@ -237,3 +237,6 @@ GROUP BY hour_of_day
 ORDER BY hour_of_day
 ```
 
+![Intensity by Hour of Day](https://user-images.githubusercontent.com/102268286/222930684-7a736a44-a9cb-47da-b45f-a8a70e5131bb.PNG)
+
+Here we see that the most popular time a day for woman to workout tends to be in the evening between 5pm and 7pm.
