@@ -1,2 +1,3 @@
 # Bellabeat Project
-# Overview
+In this project
+# About
