@@ -186,7 +186,7 @@ WHERE MinutesAwakeInBed>0 AND TotalSteps>0
 
 As we can see a woman's workout routine and total steps taken in a day had close to no impact on their time lying awake in bed, as the correlation of all three is close to zero.
 
-Next I wanted to find out how a woman's workout routine and steps taken per day impacted her total calorie intake in a day.
+Next, I wanted to find out how a woman's workout routine and steps taken per day impacted her total calorie intake in a day.
 
 ```
 ---Finds the calorie intake and workout distance---
@@ -210,9 +210,9 @@ WHERE TotalSteps>0 AND Calories>0
 ```
 ![Calories vs  Daily Activity](https://user-images.githubusercontent.com/102268286/222931376-c9c22c40-b057-4020-9d20-f0140b81ab38.PNG)
 
-Here we see a much strong correlation compared to that of the previous scatter plots. The intake of calories to workout minutes and total steps is over 0.50, while the correlation to calories to workout distance is closer to 0.40.
+Here we see a much stronger correlation compared to that of the previous scatter plots. The intake of calories to workout minutes and total steps is over 0.50, while the correlation to calories to workout distance is closer to 0.40.
 
-I now want to figure out which days were the most popular for working out.
+Now I wanted to find out which days were the most popular for working out.
 
 ```
 ---Finds the number of workouts done per day---
@@ -241,9 +241,9 @@ ORDER BY number_of_workouts DESC
 |Friday |	64	|
 |Sunday	| 57	|
 
-As we can see, the woman surveyed tend to prefer to workout during the weekdays compared to that of the weekend.
+As we can see, the woman surveyed prefer to work out during the weekdays compared to that of the weekend.
 
-Now that we have the most popular days to workout on, I wanted to find what time of day the woman prefere to workout.
+Now that we have the most popular days to exercise, I wanted to find what time of day they like to work out.
 ```
 ---Finds the most popular time of day to workout---
 SELECT EXTRACT(HOUR FROM ActivityHour) AS hour_of_day,
