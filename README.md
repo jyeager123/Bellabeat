@@ -161,7 +161,7 @@ We can see that roughly half (17 of the 33 woman surveyed) use a smart product t
 Now that I have figured out how woman use a smart product, I wanted to analyze some of the trends in the data generated from the smart product. I first wanted to find out how someone's workout impacted their minutes lying awake in bed. Again, we can consider a workout where the sum of the VeryActiveMinutes and ModerateActiveMinutes is greater than ten minutes.
 
 ```
----Finds the minutes awake in bed and the workout distance in a day---
+---Finds the minutes awake in bed and the workout distance---
 SELECT MinutesAwakeInBed, (VeryActiveDistance + ModerateActiveDistance) 
 AS WorkoutDistance
 FROM `my-first-project-374001.Bellabeat.daily_activity`
@@ -169,14 +169,14 @@ WHERE MinutesAwakeInBed>0 AND (VeryActiveMinutes + ModerateActiveMinutes)>10
 ```
 
 ```
----Finds the minutes awake in bed and the workout minutes in a day---
+---Finds the minutes awake in bed and the workout minutes---
 SELECT MinutesAwakeInBed, (VeryActiveMinutes + ModerateActiveMinutes) AS WorkoutMinutes
 FROM `my-first-project-374001.Bellabeat.daily_activity`
 WHERE MinutesAwakeInBed>0 AND (VeryActiveMinutes + ModerateActiveMinutes)>10
 ```
 
 ```
----Finds the minutes awake in bed and the total steps in a day---
+---Finds the minutes awake in bed and the total steps---
 SELECT MinutesAwakeInBed, TotalSteps
 FROM `my-first-project-374001.Bellabeat.daily_activity`
 WHERE MinutesAwakeInBed>0 AND TotalSteps>0
@@ -184,9 +184,9 @@ WHERE MinutesAwakeInBed>0 AND TotalSteps>0
 
 ![Minutes Awake in Bed vs  Daily Activity](https://user-images.githubusercontent.com/102268286/222931464-23e4a4b0-74c6-42c0-a9ec-05d6c631135c.PNG)
 
-As we can see a womans' workout routine and total steps taken in a day had close to no impact on their time laying awake in bed, as the correlation of all thhree is close to zero.
+As we can see a woman's workout routine and total steps taken in a day had close to no impact on their time lying awake in bed, as the correlation of all three is close to zero.
 
-Next I wanted to find out how a womans workout routine and steps taken per day impacted her total calorie intake in a day.
+Next I wanted to find out how a woman's workout routine and steps taken per day impacted her total calorie intake in a day.
 
 ```
 ---Finds the calorie intake and workout distance---
