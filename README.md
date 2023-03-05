@@ -152,9 +152,11 @@ GROUP BY id
 HAVING AVG(VeryActiveMinutes) + AVG(ModerateActiveMinutes) > 10 AND AVG(TotalSleepRecords)>0)
 ```
 
-|to_track_sleep_and_workout|	number_of_customers|
+|Track Sleep and Workout|	Number of Customers|
 |--------|--------|
-|use product|	17|
+|Use Product|	17|
+
+Here we can see that roughly half (17 of the 33 woman surveyed) use a smart product to track their sleep as well as their workout routine.
 
 Now that I have figured out how woman use a smart product, I wanted to analyze some of the trends in the data generated from the smart product. I first wanted to find out how someones workout impacted their minutes laying awake in bed. Again, we can consider a workout where the sum of the VeryActiveMinutes and ModerateActiveMinutes is greater than 10.
 
@@ -229,7 +231,7 @@ WHERE (VeryActiveMinutes + ModerateActiveMinutes)>10
 GROUP BY day_of_week
 ORDER BY number_of_workouts DESC
 ```
-|day_of_week | number_of_workouts	|
+|Day of Week | Number of Workouts	|
 |----------|----------|
 |Wednesday |	87 |	
 |Tuesday | 87	|
@@ -285,10 +287,12 @@ WHERE (SedentaryActiveMinutes + LightActiveMinutes + ModerateActiveMinutes + Ver
 We see that the woman surveyed typically go about 5 to 6 miles a day, with a little less than half of that being working out. On the other hand, their time working out per day makes up very little of their daily schedule.
 
 # Conclusion
-My analysis has determined that the woman surveyed using the FitbBit data tend to use a smart device to track their workout routines as well as their sleep. However, their workout routine does not have much of an impact on how fast they fall asleep. On the other hand, their workout routine, as well as their total steps taken in a day, tends to have a significiant impact on their calorie intake as those who have worked out longer, traveled farther while working out, and had more steps in a day, tend to ingest more calories.
+My analysis has determined that the woman surveyed using the FitbBit data tend to use a smart device to track their workout routines as well as their sleep. However, only half of them tend to use it to track both their workouts and sleep, while the other half tend to track either one or the other. 
+
+In regards to the workout routine itself, it does not have much of an impact on how fast a woman falls asleep. On the other hand, their workout routine, as well as their total steps taken in a day, tends to have a significiant impact on their calorie intake as those who have worked out longer, traveled farther while working out, and had more steps in a day, ingest more calories.
 
 Another aspect I found through my analysis is the preference of when to workout. The woman surveryed tend to like to workout more during the weekdays, with an evening workout being the most popular. Also, a significant portion of their distance traveled in a day, tends to be when they are working out.
 
-Bellabeat can certainly glean a lot from these findings. My first recommendation to the marketing team would be to offer customized advertisments on the Bellabeat App. For those that tend to workout and take more steps in a day, Bellabeat can offer advertising space to healthy food companies on the app. This will increase overall revenue create a postivie relationship with companies that offer healthy food products. Another possible advertising route is for sports apparel companies to advertise on the app during specific hours. Since the woman surveyed prefer to workout during the evenings of a weekday, Bellabeat can offer advertising space to those apparel companies at that time.
+Bellabeat can certainly glean a lot from these findings. My first recommendation to the marketing team would be to offer customized advertisments on the Bellabeat App. For those that tend to workout and take more steps in a day, Bellabeat can offer advertising space to healthy food companies on the app. This will increase overall revenue and create a postivie relationship with companies that offer healthy food products. Another possible advertising route is for sports apparel companies to advertise on the app during specific hours. Since the woman surveyed prefer to workout during the evenings of a weekday, Bellabeat can offer advertising space to those apparel companies at that time.
 
-Another receommendation would be to offer a new type of procuct, like a ring that goes around the finger, that tracks more details about sleep. This type of technology should have the ability to track the different stages of one's sleep pattern, such as REM sleep.
+Another receommendation would be to offer different types of product as only half of the woman surveyed use a smart device to track their workout and sleep. An example of this would be to create a new type of procuct, like a ring that goes around the finger, that tracks only details about sleep. This type of technology can have the ability provide more in depth details about ones sleep patterns, the different stages such as REM sleep.
