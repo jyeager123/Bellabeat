@@ -255,9 +255,9 @@ ORDER BY hour_of_day
 
 ![Intensity by Hour of Day](https://user-images.githubusercontent.com/102268286/222930684-7a736a44-a9cb-47da-b45f-a8a70e5131bb.PNG)
 
-Here we see that the most popular time a day for woman to workout tends to be in the evening between 5pm and 7pm.
+The most popular time of day for woman to workout tends to be in the evening between 5pm and 7pm.
 
-I also wanted to get a breakdown of the distance traveled per day by the woman surveyed and also how their minutes are spent in a day. 
+I also wanted to get a breakdown of the distance traveled per day by the woman surveyed, as well as how their minutes are spent in a day. 
 
 ```
 ---Finds the type of distance traveled per day---
