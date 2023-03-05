@@ -140,7 +140,22 @@ ORDER BY track_heartrate DESC
 ![Product Use](https://user-images.githubusercontent.com/102268286/222925270-033e1b21-549e-483d-badb-657194d254a4.PNG)
 
 Here we can see that customers much prefer to track their workouts and sleep with a smart prduct compared to tracking their heartrate.
-  
+
+Since tracking sleep and tracking a workout is the most popular way to use a smart device, I then wanted to figure out how many woamn use it to track both their sleep and workouts and how many use is to track one or the other.
+
+```
+---Counts the number of customers who use a smart device to track their sleep and their workouts---
+SELECT 'use product' AS to_track_sleep_and_workout, COUNT(*) AS number_of_customers
+FROM (SELECT COUNT(DISTINCT Id)
+FROM `my-first-project-374001.Bellabeat.daily_activity`
+GROUP BY id
+HAVING AVG(VeryActiveMinutes) + AVG(ModerateActiveMinutes) > 10 AND AVG(TotalSleepRecords)>0)
+```
+
+|to_track_sleep_and_workout|	number_of_customers|
+|--------|--------|
+|use product|	17|
+
 Now that I have figured out how woman use a smart product, I wanted to analyze some of the trends in the data generated from the smart product. I first wanted to find out how someones workout impacted their minutes laying awake in bed. Again, we can consider a workout where the sum of the VeryActiveMinutes and ModerateActiveMinutes is greater than 10.
 
 ```
