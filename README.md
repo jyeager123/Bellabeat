@@ -139,9 +139,9 @@ ORDER BY track_heartrate DESC
 
 ![Product Use](https://user-images.githubusercontent.com/102268286/222925270-033e1b21-549e-483d-badb-657194d254a4.PNG)
 
-Here we can see that customers much prefer to track their workouts and sleep with a smart prduct compared to tracking their heartrate.
+Here we can see that customers much prefer to track their workouts and sleep with a smart product compared to tracking their heartrate.
 
-Since tracking sleep and tracking a workout is the most popular way to use a smart device, I then wanted to figure out how many woamn use it to track both their sleep and workouts and how many use is to track one or the other.
+Since tracking sleep and tracking a workout are some popular ways to use a smart device, I then wanted to figure out how many women use it to track both their sleep and workouts and how many use is to track one or the other.
 
 ```
 ---Counts the number of customers who use a smart device to track their sleep and their workouts---
@@ -156,13 +156,13 @@ HAVING AVG(VeryActiveMinutes) + AVG(ModerateActiveMinutes) > 10 AND AVG(TotalSle
 |--------|--------|
 |Use Product|	17|
 
-Here we can see that roughly half (17 of the 33 woman surveyed) use a smart product to track their sleep as well as their workout routine.
+We can see that roughly half (17 of the 33 woman surveyed) use a smart product to track their sleep as well as their workout routine.
 
-Now that I have figured out how woman use a smart product, I wanted to analyze some of the trends in the data generated from the smart product. I first wanted to find out how someones workout impacted their minutes laying awake in bed. Again, we can consider a workout where the sum of the VeryActiveMinutes and ModerateActiveMinutes is greater than 10.
+Now that I have figured out how woman use a smart product, I wanted to analyze some of the trends in the data generated from the smart product. I first wanted to find out how someone's workout impacted their minutes lying awake in bed. Again, we can consider a workout where the sum of the VeryActiveMinutes and ModerateActiveMinutes is greater than ten minutes.
 
 ```
 ---Finds the minutes awake in bed and the workout distance in a day---
-SELECT MinutesAwakeInBed,(VeryActiveDistance + ModerateActiveDistance) 
+SELECT MinutesAwakeInBed, (VeryActiveDistance + ModerateActiveDistance) 
 AS WorkoutDistance
 FROM `my-first-project-374001.Bellabeat.daily_activity`
 WHERE MinutesAwakeInBed>0 AND (VeryActiveMinutes + ModerateActiveMinutes)>10
@@ -170,13 +170,13 @@ WHERE MinutesAwakeInBed>0 AND (VeryActiveMinutes + ModerateActiveMinutes)>10
 
 ```
 ---Finds the minutes awake in bed and the workout minutes in a day---
-SELECT MinutesAwakeInBed,(VeryActiveMinutes + ModerateActiveMinutes) AS WorkoutMinutes
+SELECT MinutesAwakeInBed, (VeryActiveMinutes + ModerateActiveMinutes) AS WorkoutMinutes
 FROM `my-first-project-374001.Bellabeat.daily_activity`
-WHERE MinutesAwakeInBed>0 AND (VeryActiveMinutes+ModerateActiveMinutes)>10
+WHERE MinutesAwakeInBed>0 AND (VeryActiveMinutes + ModerateActiveMinutes)>10
 ```
 
 ```
----Finds the minutes awake in bed and the total steps in a day
+---Finds the minutes awake in bed and the total steps in a day---
 SELECT MinutesAwakeInBed, TotalSteps
 FROM `my-first-project-374001.Bellabeat.daily_activity`
 WHERE MinutesAwakeInBed>0 AND TotalSteps>0
